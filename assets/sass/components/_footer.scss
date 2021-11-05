@@ -1,0 +1,158 @@
+footer {
+    background-color: #12100e;
+
+    .footer-up {
+        .footer-up-1 {
+            border-bottom: 1px solid #cba181;
+            padding: 39px 0 35px;
+
+            .footer_newsletter_caption {
+                h4 {
+                    color: #cba181;
+                    letter-spacing: .025em;
+                    font-size: 24px;
+                }
+
+                p {
+                    margin: 19px 0 13px;
+                    font-size: 16px;
+                    letter-spacing: .03em;
+                }
+            }
+
+            .form {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                form {
+
+                    .form_wrapper {
+                        .email {
+                            height: 4.4rem;
+                            padding: 6px 10px;
+                            background-image: none;
+                            line-height: 1.42857143;
+                            background-color: #fff;
+                            border: 1px solid #cba181;
+                            border-radius: 1rem;
+                            font-size: 14px;
+                        }
+
+                        .btn {
+                            background: #cba181;
+                            color: #fff;
+                            margin-left: 10px;
+                            padding: 10px 15px;
+                            font-size: 14px;
+                            border: 2px solid #cba181;
+                            border-radius: 1rem;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .footer-up-2 {
+            padding: 31px 0 57px;
+            border-bottom: 1px solid #cba181;
+
+            .footer_item {
+                text-align: center;
+
+                h6 {
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                    color: #cba181;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
+                .list_links {
+                    margin: 1.6rem 0;
+
+                    li {
+                        font-size: 1.6rem;
+                        padding-bottom: 1rem;
+
+                        a {
+                            position: relative;
+
+                            &:hover {
+                                color: #cba181;
+                                outline: 0;
+                                transition: background .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out;
+
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: -3px;
+                                    width: 0;
+                                    height: 2px;
+                                    background: #cba181;
+                                    transition: width .2s ease-in-out;
+                                    transform: translate3d(0, 0, 0);
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    .contact_address {
+                        padding-top: 8px;
+                        letter-spacing: -.05em;
+                        line-height: 1.7em;
+                        font-size: 1.6rem;
+
+                    }
+
+                    .contact {
+                        display: block;
+                        font-size: 1.6rem;
+                        letter-spacing: -.04em;
+                        line-height: 1.7em;
+
+                        &:hover {
+                            color: #cba181;
+                            transition: background .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out;
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        .footer-down {
+            padding: 5px 0;
+
+            .footer_copyright {
+                font-size: 14px;
+                letter-spacing: -.047em;
+                color: #cba181;
+                font-weight: 400;
+
+                a {
+                    color: #cba181;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .social_menu {
+
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+}

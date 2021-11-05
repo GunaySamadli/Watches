@@ -1,137 +1,660 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap-grid.css" /> -->
-    <link
-      rel="shortcut icon"
-      href="https://templates.iqonic.design/streamit/frontend/html/images/favicon.ico"
-    />
-    <link rel="stylesheet" href="./assets/flickity/flickity.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Stream-it main page</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="custom-container">
-        <div class="header__wrapper">
-          <a href="index.html" class="header__logo">
-            <img
-              src="https://templates.iqonic.design/streamit/frontend/html/images/logo.png"
-              alt="Stream it logo"
-            />
-          </a>
-          <nav class="header__navigation-list__wrapper">
-            <ul class="header__navigation-list">
-              <li class="header__navigation-list__item">
-                <a href="/index.html" class="active">Home</a>
-              </li>
-              <li class="header__navigation-list__item">
-                <a href="/movies.html">Movies</a>
-              </li>
-              <li class="header__navigation-list__item">
-                <a href="/tv-shows.html">TV shows</a>
-              </li>
-              <li class="header__navigation-list__item">
-                <a href="/pages.html">Pages</a>
-              </li>
-            </ul>
-          </nav>
-          <ul class="header__actions">
-            <li>
-              <a href="">
-                <i class="ri-search-line"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="search-toggle position-relative">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="22"
-                  height="22"
-                  class="noti-svg"
-                >
-                  <path fill="none" d="M0 0h24v24H0z"></path>
-                  <path
-                    d="M18 10a6 6 0 1 0-12 0v8h12v-8zm2 8.667l.4.533a.5.5 0 0 1-.4.8H4a.5.5 0 0 1-.4-.8l.4-.533V10a8 8 0 1 1 16 0v8.667zM9.5 21h5a2.5 2.5 0 1 1-5 0z"
-                  ></path>
-                </svg>
-                <span class="bg-danger dots"></span>
-              </a>
-            </li>
-            <li class="header__actions--profile">
-              <a href="">
-                <img
-                  src="https://templates.iqonic.design/streamit/frontend/html/images/user/user.jpg"
-                  alt="Default user avatar"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="custom-container">
-        <div class="movie-details">
-          <div class="movie-details__inner">
-            <div class="movie-details__logo">
-              <img
-                src="https://templates.iqonic.design/streamit/frontend/html/images/logo.png"
-                class="c-logo"
-                alt="streamit"
-              />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/cdn.shopify.com/s/files/1/0273/2346/5866/files/fav_32x32.png?v=1576074286"
+    type="image/png">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Apparelix watches</title>
+</head>
+
+<body>
+  <!--Header-->
+  <header class="header">
+    <div class="container-fluid">
+      <div class="header-up">
+        <div class="row">
+          <div class="col-4">
+            <div class="currency_selector">
+              <div class="currency_selector__wrap" title="Currency">
+                <div id="currency_active" class="">USD</div>
+                <ul id="currency_selector" class="">
+                  <li data-value="USD" id="currency_selected" class="currency_selector__item">USD</li>
+                  <li data-value="EUR" class="currency_selector__item">EUR</li>
+                  <li data-value="GBP" class="currency_selector__item">GBP</li>
+                </ul>
+              </div>
             </div>
-            <h1 class="movie-details__heading">Bushland</h1>
-            <div class="movie-details__fan-rating">
-              <ul class="movie-details__stars">
-                <li>
-                  <i class="fa fa-star" style="color: #e50914"></i>
-                </li>
-                <li>
-                  <i class="fa fa-star" style="color: #e50914"></i>
-                </li>
-                <li>
-                  <i class="fa fa-star" style="color: #e50914"></i>
-                </li>
-                <li>
-                  <i class="fa fa-star" style="color: #e50914"></i>
-                </li>
-                <li>
-                  <i class="fa fa-star" style="color: #e50914"></i>
-                </li>
-              </ul>
-              <span class="movie-details__imdb-rating"> 4.7(lmdb) </span>
-              <span class="movie-details__pg">18+</span>
-              <span class="movie-details__season-count">2 seasons</span>
+          </div>
+          <div class="col-4">
+            <div class="logo">
+              <img src="./assets/images/logo.png" alt="">
             </div>
-            <p class="movie-details__description">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s.
-            </p>
-            <ul class="movie-details__general">
-              <li>
-                <span>Starring:</span>
-                Karen Gilchrist, James Earl Jones
-              </li>
-              <li>
-                <span>Genres:</span>
-                Action
-              </li>
-              <li>
-                <span>Tag:</span>
-                Fiction, Adventure, Action
-              </li>
-            </ul>
-            <div>
-                <button class="button is-primary is-medium">Play now</button>
-                <a href="" ></a>
+          </div>
+          <div class="col-4">
+            <div class="header_item_right">
+              <div class="header_item">
+                <span class="search_toggle">
+                  <span class="link_text">Search</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="#cba181" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20 18.5787L16.2437 14.8223C17.4619 13.2995 18.2741 11.269 18.2741 9.13706C18.2741 4.06091 14.2132 0 9.13706 0C4.06091 0 0 4.06091 0 9.13706C0 14.2132 4.06091 18.2741 9.13706 18.2741C11.269 18.2741 13.2995 17.5635 14.8223 16.2437L18.5787 20L20 18.5787ZM2.03046 9.13706C2.03046 5.17766 5.17766 2.03046 9.13706 2.03046C13.0964 2.03046 16.2437 5.17766 16.2437 9.13706C16.2437 13.0964 13.0964 16.2437 9.13706 16.2437C5.17766 16.2437 2.03046 13.0964 2.03046 9.13706Z">
+                    </path>
+                  </svg>
+                </span>
+              </div>
+              <div class="header_item">
+                <a href="/pages/wishlist" title="Wishlist">
+                  <span class="link_text">Wishlist</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="#cba181" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 18L8.74 16.7826C4.06 12.7826 1 10.087 1 6.78261C1 4.08696 3.16 2 5.95 2C7.48 2 9.01 2.69565 10 3.82609C10.99 2.69565 12.52 2 14.05 2C16.84 2 19 4.08696 19 6.78261C19 10.087 15.94 12.7826 11.26 16.7826L10 18Z"
+                      stroke-width="2" stroke-linecap="round"></path>
+                  </svg>
+                  <span class="zemez_wishlist_total  hidden"></span>
+                </a>
+              </div>
+              <div class="header_item">
+                <a href="/account">
+                  <span class="link_text">Account</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="#cba181" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19.9005 18.8945C19.801 17.9899 19.602 17.0854 19.204 16.1809C18.7065 14.9749 18.01 13.8693 17.0149 12.9648C16.1194 12.0603 15.0249 11.2563 13.8308 10.7538C11.4428 9.74874 8.65672 9.74874 6.16915 10.7538C4.97512 11.2563 3.8806 11.9598 2.98507 12.8643C2.08955 13.7688 1.29353 14.8744 0.79602 16.0804C0.497512 16.9849 0.199005 17.9899 0.0995025 18.8945L0 20H20L19.9005 18.8945ZM2.28856 17.9899C2.38806 17.5879 2.48756 17.2864 2.68657 16.8844C3.08458 15.8794 3.68159 15.0754 4.37811 14.2714C5.17413 13.5678 5.97015 12.9648 6.96517 12.5628C8.95522 11.7588 11.1443 11.7588 13.0348 12.5628C14.0299 12.9648 14.9254 13.5678 15.6219 14.2714C16.3184 14.9749 16.9154 15.8794 17.3134 16.8844C17.4129 17.1859 17.6119 17.5879 17.7114 17.9899H2.28856Z">
+                    </path>
+                    <path
+                      d="M12.9 6.88199C13.6 6.18634 14 5.19255 14 4C14 2.80745 13.6 1.91304 12.9 1.11801C11.3 -0.372671 8.7 -0.372671 7.2 1.11801C6.4 1.91304 6 2.90683 6 4C6 5.09317 6.4 6.08696 7.2 6.88199C8.7 8.37267 11.3 8.37267 12.9 6.88199ZM8.6 2.6087C9.3 1.91304 10.7 1.91304 11.4 2.6087C11.8 3.00621 12 3.50311 12 4C12 4.49689 11.8 4.99379 11.4 5.3913C10.7 6.08696 9.3 6.08696 8.6 5.3913C8.2 5.09317 8 4.59627 8 4C8 3.40373 8.2 2.90683 8.6 2.6087Z">
+                    </path>
+                  </svg>
+                </a>
+
+              </div>
+              <div class="header_item" id="main__cart_item">
+                <a class="cart_link" href="/cart">
+
+                  <span class="link_text">Cart</span>
+
+                  <span id="cart_items" class="header_cart_items hidden"> 0 </span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="#cba181" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 20H0V6H20V20ZM2 18H18V8H2V18Z"></path>
+                    <path
+                      d="M14 3.99995H12C12 3.49995 11.8 2.99995 11.4 2.59995C10.7 1.89995 9.3 1.89995 8.6 2.59995C8.2 2.89995 8 3.39995 8 3.99995H6C6 2.89995 6.4 1.89995 7.2 1.19995C8.7 -0.300049 11.3 -0.300049 12.9 1.19995C13.6 1.89995 14 2.89995 14 3.99995Z">
+                    </path>
+                  </svg></a>
+                <script>
+                  theme.cartAjaxOn = true;
+                  theme.cartAjaxTextEmpty = 'It appears that your cart is currently empty';
+                  theme.cartAjaxTextTotalPrice = 'Total price';
+                  theme.cartAjaxTextGoCart = 'Go to cart';
+                  theme.cartAjaxTextClearCart = 'Clear cart';
+                </script>
+                <div class="cart_content_wrap">
+                  <div class="cart_content_preloader off">
+                    <div class="global_loader"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
-  </body>
+      <div class="header-down">
+        <nav>
+          <ul class="nav-item-header">
+            <li class="nav-item"><a href="">Home</a>
+              <ul class="home">
+                <li><a href="">Home</a></li>
+                <li><a href="">Section All</a></li>
+                <li><a href="">Catalog</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact Us</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="">Sections All</a></li>
+            <li class="nav-item"><a href="">Catalog</a>
+              <ul class="catalog">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-2">
+                      <ul class="catalog-head">MEN'S</ul>
+                      <li><a href="">Accessories</a></li>
+                      <li><a href="">Luxury</a></li>
+                      <li><a href="">Sale</a></li>
+                      <li><a href="">Search</a></li>
+                      <li><a href="">Sports</a></li>
+                    </div>
+                    <div class="col-2">
+                      <ul class="catalog-head">WOMEN'S</ul>
+                      <li><a href="">Vinatge</a></li>
+                      <li><a href="">Unisex</a></li>
+                      <li><a href="">Sports</a></li>
+                      <li><a href="">Ladies</a></li>
+                      <li><a href="">Kids’</a></li>
+                    </div>
+                    <div class="col-2">
+                      <ul class="catalog-head">KID'S</ul>
+                      <li><a href="">Kids’</a></li>
+                      <li><a href="">Luxury</a></li>
+                      <li><a href="">Sports</a></li>
+                      <li><a href="">Vintage</a></li>
+                      <li><a href="">Unisex</a></li>
+                    </div>
+                    <div class="col-3">
+                      <div class="img">
+                        <img src="./assets/images/catalog-1.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="img">
+                        <img src="./assets/images/catalog-2.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="">Collections</a>
+              <ul class="catalog">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-2">
+                      <ul class="catalog-head"></ul>
+                      <li><a href="">Accessories</a></li>
+                      <li><a href="">Luxury</a></li>
+                      <li><a href="">Sale</a></li>
+                      <li><a href="">Search</a></li>
+                      <li><a href="">Sports</a></li>
+                    </div>
+                    <div class="col-2">
+                      <ul class="catalog-head"></ul>
+                      <li><a href="">Vinatge</a></li>
+                      <li><a href="">Unisex</a></li>
+                      <li><a href="">Sports</a></li>
+                      <li><a href="">Ladies</a></li>
+                      <li><a href="">Kids’</a></li>
+                    </div>
+                    <div class="col-4">
+                      <div class="img">
+                        <img src="./assets/images/collection-1.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="img">
+                        <img src="./assets/images/collection-2.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="">Clearence</a></li>
+            <li class="nav-item"><a href="">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!--Homepage-->
+    <section id="homepage">
+      <div class="container">
+        <div class="col-md-12">
+          <div class="homepage">
+            <div class="homepage-text">
+              <h5>CREATING A FEATURE CLASSIC</h5>
+              <h2>Everything that’s new and now</h2>
+              <p>Our extensive collection of men’s and women’s watches covers every style and taste,
+                from cutting-edge modern designs to ageless classics.</p>
+              <a class="btn"><span>Shop Now</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Watches-->
+    <section id="watches">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-xs-12">
+            <div class="watch">
+              <img src="./assets/images/watch-1.jpg" alt="">
+              <div class="banner_caption">
+                <div class="caption_text  text_align_center">
+                  <h2>Men’s Watches</h2>
+                  <h4>Limited Time Deals</h4>
+                  <a class="btn"><span> </span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <div class="watch">
+              <img src="./assets/images/watch-2.jpg" alt="">
+              <div class="banner_caption">
+                <div class="caption_text  text_align_center">
+                  <h2>Ladies Watches</h2>
+                  <h4>Don’t miss the moment</h4>
+                  <a class="btn"><span> </span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <div class="watch">
+              <img src="./assets/images/watch-3.jpg" alt="">
+              <div class="banner_caption">
+                <div class="caption_text  text_align_center">
+                  <h2>Vintage Watches</h2>
+                  <h4>Hyperchrome Match Point</h4>
+                  <a class="btn"><span> </span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Original-->
+    <section id="original">
+      <div class="container-fluid">
+        <div class="origin-item">
+          <img src="./assets/images/original.jpg" alt="">
+          <div class="banner_caption">
+            <div class="caption_text  text_align_left">
+              <h2>
+                <p>The Original</p>
+              </h2>
+              <h4><b>T</b>ick tock. You’ll never wonder what time it is again when you browse through all watches,
+                including designer brands like Gucci, Daniel Wellington. From stainless steel and ceramic watch straps
+                to leather and fabric ones, you’ll find the perfect fit for your wrist. <br><br> Our extensive
+                collection of <span>men’s</span> and <span>women’s</span> watches covers every style and taste, from
+                cutting-edge modern designs to ageless classics. Want a watch that’s both practical and fashionable?
+                Look for straps in vibrant colors like pink, purple bright white.</h4>
+              <a class="btn text-center">View Collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Shop-->
+    <section id="shop">
+      <div class="container-fluid">
+        <h4 class="section_heading"><span>Shop Best Sellers</span></h4>
+        <div class="shopes">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="product-item">
+                <div class="product-img">
+                  <a class="img_change">
+                    <img class=" lazyloaded" src="./assets/images/shop-1.png"
+                      alt="Tommy Hilfiger Blue Ion Plated Ladies Watch">
+                    <div class="bade_wrap">
+                    </div>
+                  </a>
+                  <div class="product_links">
+                    <form method="post" action="/cart/add" class="add_to_cart_form">
+                      <input type="hidden" name="id" value="31411630735498">
+                      <button class="btn btn-cart" type="submit">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span>Add to cart</span>
+                      </button>
+                    </form>
+                    <div class="product_links__subbutton">
+                      <a class="quick_view_btn" title="Quick view">
+                        <i class="fas fa-search-plus"></i>
+                      </a>
+                      <a href="/account/login" class="wishlist_btn wishlist_login quick_view_btn"><i
+                          class="fa fa-heart"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product_info">
+                  <p class="product_name">
+                    <a>Tommy Hilfiger Blue Ion Plated
+                      Ladies
+                      Watch</a>
+                  </p>
+                  <p class="product_price">
+                    <span class="money main_price" data-currency-usd="$67.00">$67.00</span>
+                    <span class="money money_sale" data-currency-usd="$88.00">$88.00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="product-item">
+                <div class="product-img">
+                  <a class="img_change">
+                    <img class=" lazyloaded" src="./assets/images/shop-2.png"
+                      alt="Tommy Hilfiger Blue Ion Plated Ladies Watch">
+                    <div class="bade_wrap">
+                    </div>
+                  </a>
+                  <div class="product_links">
+                    <form method="post" action="/cart/add" class="add_to_cart_form">
+                      <input type="hidden" name="id" value="31411630735498">
+                      <button class="btn btn-cart" type="submit">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span>Add to cart</span>
+                      </button>
+                    </form>
+                    <div class="product_links__subbutton">
+                      <a class="quick_view_btn" title="Quick view">
+                        <i class="fas fa-search-plus"></i>
+                      </a>
+                      <a href="/account/login" class="wishlist_btn wishlist_login quick_view_btn"><i
+                          class="fa fa-heart"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product_info">
+                  <p class="product_name">
+                    <a>Olivia Burton Glasshouse Rose Gold Plated Mesh ...</a>
+                  </p>
+                  <p class="product_price">
+                    <span class="money main_price" data-currency-usd="$67.00">$20.00</span>
+                    <span class="money money_sale" data-currency-usd="$88.00">$22.00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="product-item">
+                <div class="product-img">
+                  <a class="img_change">
+                    <img class=" lazyloaded" src="./assets/images/shop-3.png"
+                      alt="Tommy Hilfiger Blue Ion Plated Ladies Watch">
+                    <div class="bade_wrap">
+                    </div>
+                  </a>
+                  <div class="product_links">
+                    <form method="post" action="/cart/add" class="add_to_cart_form">
+                      <input type="hidden" name="id" value="31411630735498">
+                      <button class="btn btn-cart" type="submit">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span>Add to cart</span>
+                      </button>
+                    </form>
+                    <div class="product_links__subbutton">
+                      <a class="quick_view_btn" title="Quick view">
+                        <i class="fas fa-search-plus"></i>
+                      </a>
+                      <a href="/account/login" class="wishlist_btn wishlist_login quick_view_btn"><i
+                          class="fa fa-heart"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product_info">
+                  <p class="product_name">
+                    <a>Gucci G Timeless Gold Plated Leather Watch</a>
+                  </p>
+                  <p class="product_price">
+                    <span class="money main_price" data-currency-usd="$67.00">$10.00</span>
+                    <span class="money money_sale" data-currency-usd="$88.00">$19.00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="product-item">
+                <div class="product-img">
+                  <a class="img_change">
+                    <img class=" lazyloaded" src="./assets/images/shop-4.png"
+                      alt="Tommy Hilfiger Blue Ion Plated Ladies Watch">
+                    <div class="bade_wrap">
+                    </div>
+                  </a>
+                  <div class="product_links">
+                    <form method="post" action="/cart/add" class="add_to_cart_form">
+                      <input type="hidden" name="id" value="31411630735498">
+                      <button class="btn btn-cart" type="submit">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span>Add to cart</span>
+                      </button>
+                    </form>
+                    <div class="product_links__subbutton">
+                      <a class="quick_view_btn" title="Quick view">
+                        <i class="fas fa-search-plus"></i>
+                      </a>
+                      <a href="/account/login" class="wishlist_btn wishlist_login quick_view_btn"><i
+                          class="fa fa-heart"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product_info">
+                  <p class="product_name">
+                    <a>Tissot Lepine Rose Gold Tone Mechanical Pocket ...</a>
+                  </p>
+                  <p class="product_price">
+                    <span class="money main_price" data-currency-usd="$67.00">$95.00</span>
+                    <span class="money money_sale" data-currency-usd="$88.00">$100.00</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Add-->
+    <section id="add">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="add-item">
+              <img src="./assets/images/add-1.jpg" alt="">
+              <div class="caption_text">
+                <h2>Timex Command</h2>
+                <h4>Up to 25% off</h4>
+                <a class="btn"><span>Shop Now</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="add-item">
+              <img src="./assets/images/add-2.jpg" alt="">
+              <div class="caption_text-down">
+                <h2><span>Special Offers</span></h2>
+                <h4>Buy designer leather, stainless steel &amp; more types of Mens Watches Online</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Review-->
+    <section id="review">
+      <div class="container">
+        <div class="review_caption">
+          <p class="review_caption__text">Reviews from:</p>
+          <img src="./assets/images/review.png" alt="">
+        </div>
+        <div class="col-6 review-down">
+          <div class="review">
+            <div class="review-item">
+              <div class="review__stars">
+                <span class="star_item">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.5142 7.51048H12.7417L10.3409 0L7.93265 7.51048L0.160156 7.50287L6.45468 12.1493L4.0464 19.6522L10.3409 15.0133L16.6279 19.6522L14.2272 12.1493L20.5142 7.51048Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="star_item">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.5142 7.51048H12.7417L10.3409 0L7.93265 7.51048L0.160156 7.50287L6.45468 12.1493L4.0464 19.6522L10.3409 15.0133L16.6279 19.6522L14.2272 12.1493L20.5142 7.51048Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="star_item">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.5142 7.51048H12.7417L10.3409 0L7.93265 7.51048L0.160156 7.50287L6.45468 12.1493L4.0464 19.6522L10.3409 15.0133L16.6279 19.6522L14.2272 12.1493L20.5142 7.51048Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="star_item">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.5142 7.51048H12.7417L10.3409 0L7.93265 7.51048L0.160156 7.50287L6.45468 12.1493L4.0464 19.6522L10.3409 15.0133L16.6279 19.6522L14.2272 12.1493L20.5142 7.51048Z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="star_item">
+                  <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.5142 7.51048H12.7417L10.3409 0L7.93265 7.51048L0.160156 7.50287L6.45468 12.1493L4.0464 19.6522L10.3409 15.0133L16.6279 19.6522L14.2272 12.1493L20.5142 7.51048Z">
+                    </path>
+                  </svg>
+                </span>
+              </div>
+              <blockquote class="testimonials_item">
+                <p class="testimonials_item__text">Thank you again and again! I have experienced the fastest support
+                  ever. My order arrived on my doorstep the following day. Your team is always friendly and very
+                  helpful. You managed to exceed my expectations!</p>
+                <cite class="testimonials_item__author">Sam Kromstain</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-up">
+      <div class="footer-up-1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="footer_newsletter_caption">
+                <h4>Get our latest news and special sales</h4>
+                <p class="form_text">You may unsubscribe at any moment. For that purpose, please find our contact info
+                  in the legal notice.</p>
+              </div>
+            </div>
+            <div class="col-md-6 form">
+              <form method="post">
+                <div class="form_wrapper">
+                  <input type="email" name="contact[email]" class="email" placeholder="Enter your email">
+                  <p class="alert-inline" style="display: none;"></p>
+                  <button class="btn" type="submit">Get</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-up-2">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="footer_item">
+                <h6 class="linklist_menu_title">Your Account</h6>
+                <ul class="list_links">
+                  <li>
+                    <a href="/account">Personal info</a>
+                  </li>
+                  <li>
+                    <a href="/account/orders">Orders</a>
+                  </li>
+                  <li>
+                    <a href="/cart">My Cart</a>
+                  </li>
+                  <li>
+                    <a href="/account/addresses">Addresses</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer_item">
+                <h6 class="linklist_menu_title">CUSTOMER SERVICE</h6>
+                <ul class="list_links">
+                  <div class="contact_address">
+                    <p>Monday to Friday <br>10am - 6.30pm (NewYork time) </p>
+                  </div>
+                  <a class="contact" href="tel:+(001) 23 45 67 89">
+                    +(001) 23 45 67 89</a>
+                  <a class="contact" href="mailto:shopify@zemez.io">shopify@zemez.io</a>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer_item">
+                <h6 class="linklist_menu_title">OUR GUARANTEES</h6>
+                <ul class="list_links">
+                  <div class="contact_address">
+                    <p>Shipping in 3 days</p>
+                    <p>Free returns within 14 days</p>
+                    <p>Secure payments</p>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer_item">
+                <h6 class="linklist_menu_title">Our Company</h6>
+                <ul class="list_links">
+                  <li>
+                    <a href="/pages/delivery-info">Delivery Info</a>
+                  </li>
+                  <li>
+                    <a href="/policies/privacy-policy">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="/policies/refund-policy">Refund Policy</a>
+                  </li>
+                  <li>
+                    <a href="/policies/terms-of-service">Terms of Service</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-down">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="footer_copyright text-start">
+                © 2021. <a target="_blank" rel="nofollow"
+                  href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered
+                  by Shopify</a>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="footer_payments">
+                <img src="./assets/images/footer-1.svg">
+                <img src="./assets/images/footer-2.svg">
+                <img src="./assets/images/footer-3.svg">
+                <img src="./assets/images/footer-4.svg">
+                <img src="./assets/images/footer-5.svg">
+              </div>
+            </div>
+            <div class="col-md-4 text-end">
+              <ul class="social_menu">
+                <li><a href="https://www.facebook.com/zemezlab/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/zemezlab"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/zemezlab"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCPW43un8VFXHe9LxKpR_2Hg"><i
+                      class="fab fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./assets/js/main.js"></script>
+
 </html>
