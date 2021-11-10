@@ -8648,7 +8648,8 @@ main {
       color: #cba181;
       margin: 2rem 0; }
     main #shop .product-item {
-      background-color: #12100e; }
+      background-color: #12100e;
+      margin-right: 1.5rem; }
       main #shop .product-item .product-img {
         position: relative; }
         main #shop .product-item .product-img img {
@@ -8721,6 +8722,26 @@ main {
           margin-right: 5px;
           font-size: 14px;
           color: #e7e0dd; }
+    main #shop .slick-dots {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      main #shop .slick-dots li {
+        margin: 0 4px; }
+        main #shop .slick-dots li button {
+          cursor: pointer;
+          background: #e9ecef;
+          width: 10px;
+          height: 10px;
+          overflow: hidden;
+          color: #e9ecef;
+          border: none;
+          border-radius: 100%; }
+        main #shop .slick-dots li.slick-active button {
+          background: #cba181;
+          color: #cba181; }
   main #add {
     padding-top: 10rem; }
     main #add .add-item {
